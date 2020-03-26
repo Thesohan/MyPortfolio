@@ -8,7 +8,6 @@ class Assets{
   static const twitter= 'assets/twitter.png';
   static const hacker= 'assets/hacker.png';
   static const ibit= 'assets/ib.png';
-
   static const atg_world = 'assets/atg.png';
   static const nituk = 'assets/nituk.jpg';
   static const genesis = 'assets/genesis.png';
@@ -18,7 +17,6 @@ class Assets{
   static const cetpa = 'assets/cetpa.png';
   static const topnotes = 'assets/works/topnotes.png';
   static const sharedNotice = 'assets/works/sharednotice.png';
-
   static const foodheaven = 'assets/works/foodheaven.png';
   static const isafe = 'assets/works/isafe.png';
   static const mmc= 'assets/works/isafe.png';

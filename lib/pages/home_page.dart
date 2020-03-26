@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/config/assets.dart';
 import 'package:my_protfolio/config/constants.dart';
+import 'package:my_protfolio/config/social_profile_link.dart';
 import 'package:my_protfolio/tabs/about_tab.dart';
 import 'package:my_protfolio/tabs/projects_tab.dart';
 import 'package:my_protfolio/widgets/responsive_widget.dart';
@@ -30,6 +31,15 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
+          FlatButton.icon(
+            icon: Icon(
+              Icons.insert_drive_file,
+              color: Colors.blueGrey,
+            ),
+            label: Text('Resume'),
+            onPressed: () =>
+                html.window.open(Constants.RESUME, 'Sohan Kathait'),
+          ),
           IconButton(
             icon: ThemeSwitcher.of(context).isDarkModeOn
                 ? Icon(Icons.wb_sunny)
@@ -39,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                     width: 20,
                   ),
             onPressed: () => ThemeSwitcher.of(context).switchDarkMode(),
-          )
+          ),
         ],
       ),
       body: NestedScrollView(
@@ -78,73 +88,62 @@ class _HomePageState extends State<HomePage> {
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
         centerTitle: false,
+        titlePadding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
         title: Text(
           'Sohan Kathait',
           style: Theme.of(context).textTheme.headline6,
-          textAlign: TextAlign.center,
+          textAlign: TextAlign.start,
         ),
         background: ResponsiveWidget(
           largeScreen: _buildHeader(
-              isSmall: false, imageParam: 200.0, textScaleFactor: 2.0),
+            isSmall: false,
+          ),
           smallScreen: _buildHeader(
-              isSmall: true, imageParam: 150.0, textScaleFactor: 1.3),
+            isSmall: true,
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildHeader(
-      {bool isSmall, double textScaleFactor, double imageParam}) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: isSmall ? 32.0 : 64.0),
-          child: Container(
-            height: imageParam,
-            width: imageParam,
-            child: CircleAvatar(
-              radius: imageParam,
-              backgroundImage: Image.asset(Assets.avatar).image,
+  Widget _buildHeader({bool isSmall}) {
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            child: Container(
+              height: 150.0,
+              width: 150.0,
+              child: CircleAvatar(
+                radius: 150.0,
+                backgroundImage: Image.asset(Assets.avatar).image,
+              ),
             ),
           ),
-        ),
-        Expanded(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Flexible(
-                child: Text(
-                  'Mobile App Developer (Android,Flutter), \n Coder || Textrovert || Doer.\nLove my Friends and Family Unconditionally.',
-                  style: Theme.of(context).textTheme.caption,
-                  textAlign: TextAlign.center,
-                  textScaleFactor: textScaleFactor,
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Flexible(
+                  child: Text(
+                    'Mobile App Developer (Android,Flutter) \n Coder || Textrovert || Doer.\nLove my Friends and Family Unconditionally.',
+                    style: Theme.of(context).textTheme.caption,
+                    textAlign: TextAlign.center,
+                    textScaleFactor: 1.4,
+                  ),
                 ),
-              ),
-              Flexible(
-                child: Text(
-                  'Do what you love to do and must do what you have to do...',
-                  style: Theme.of(context).textTheme.caption,
-                  textScaleFactor: textScaleFactor == 2.0 ? 1.3 : 1,
-                  textAlign: TextAlign.center,
+                Flexible(
+                  child: Text(
+                    'Do what you love to do and must do what you have to do...',
+                    style: Theme.of(context).textTheme.caption,
+                    textScaleFactor: 1.2,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ),
-        Align(
-          alignment: Alignment.bottomRight,
-          child: FlatButton.icon(
-            icon: Icon(
-              Icons.description,
-              color: Colors.blueGrey,
+              ],
             ),
-            label: Text('${isSmall ? '' : 'Resume'}'),
-            onPressed: () =>
-                html.window.open(Constants.RESUME, 'Sohan Kathait'),
           ),
-        ),
-      ],
-    );
+        ]);
   }
 }

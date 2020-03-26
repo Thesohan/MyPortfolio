@@ -5,9 +5,9 @@ final List<CompanyModel> companies = [
   CompanyModel(
       name: 'Genesis For Startup',
       description: 'Mobile app developer',
-      link: '',
+      link: 'https://drive.google.com/file/d/1B004tDLZs-JONZFncoJ6CFSMGs_cFw7g/view?usp=drivesdk',
       image: Assets.genesis,
-      date: '(July 1,2019 - Dec 31,2019)'),
+      date: '(Jan 13,2020 – Mar 26,2020)'),
   CompanyModel(
       name: 'Koverhoop Technologies',
       description: 'Flutter developer',
