@@ -9,7 +9,7 @@ final List<CompanyModel> companies = [
       image: Assets.genesis,
       date: '(July 1,2019 - Dec 31,2019)'),
   CompanyModel(
-      name: 'KOVERHOOP TECHNOLOGIES',
+      name: 'Koverhoop Technologies',
       description: 'Flutter developer',
       link: 'https://drive.google.com/open?id=1XRJbypeCzCkVSCUHCD4hUDA8rkKvmDiG',
       image: Assets.koverhoop,
@@ -23,7 +23,7 @@ final List<CompanyModel> companies = [
   CompanyModel(
       name: 'RATE MY SINGING',
       description: 'Android app developer',
-      link: '',
+      link: 'https://drive.google.com/a/nituk.ac.in/file/d/0B1SfAvZXrNrAMUEtdzBoVUp5al8xTXhtS1Z2V0lHOEtHa0M4/view?usp=drivesdk',
       image: Assets.ratemysinging,
       date: '(Feb 8,2019 - May 18,2019)'),
   CompanyModel(
@@ -35,7 +35,7 @@ final List<CompanyModel> companies = [
   CompanyModel(
       name: 'National Institute Of Technology,Uttarakhand',
       description: 'B_Tech (CSE), CGPA: 8.29/10',
-      link: '',
+      link: 'https://nituk.ac.in',
       date: '(2016-2020)',
       image: Assets.nituk),
   CompanyModel(

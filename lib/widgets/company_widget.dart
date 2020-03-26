@@ -19,51 +19,53 @@ class CompanyWidget extends StatelessWidget {
         onTap: onCompanyClick,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Center(
-                child: Image.asset(
-                  companyModel.image,
-                  width: width * .14,
-                  height: width * .14,
+          child: Flexible(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Center(
+                  child: Image.asset(
+                    companyModel.image,
+                    width: width * .14,
+                    height: width * .14,
+                  ),
                 ),
-              ),
-              Container(
-                width: 18.0,
-              ),
-              Expanded(
-                child: Container(
-                  padding: EdgeInsets.only(top: 8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(companyModel.name,
-                          style: Theme.of(context).textTheme.headline6),
-                      SizedBox(
-                        height: height * .01,
-                      ),
-                      Text(
-                        companyModel.description,
-                        textScaleFactor: 1.2,
-                        style: Theme.of(context).textTheme.caption,
-                      ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: Text(
-                          companyModel.date,
+                Container(
+                  width: 18.0,
+                ),
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.only(top: 8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(companyModel.name,
+                            style: Theme.of(context).textTheme.headline6),
+                        SizedBox(
+                          height: height * .01,
+                        ),
+                        Text(
+                          companyModel.description,
                           textScaleFactor: 1.2,
                           style: Theme.of(context).textTheme.caption,
                         ),
-                      ),
-                    ],
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Text(
+                            companyModel.date,
+                            textScaleFactor: 1.2,
+                            style: Theme.of(context).textTheme.caption,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
