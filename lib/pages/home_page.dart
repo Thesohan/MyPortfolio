@@ -113,10 +113,10 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: Container(
-              height: 150.0,
-              width: 150.0,
+              height: 146.0,
+              width: 146.0,
               child: CircleAvatar(
-                radius: 150.0,
+                radius: 146.0,
                 backgroundImage: Image.asset(Assets.avatar).image,
               ),
             ),
@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                     'Mobile App Developer (Android,Flutter) \n Coder || Textrovert || Doer.\nLove my Friends and Family Unconditionally.',
                     style: Theme.of(context).textTheme.caption,
                     textAlign: TextAlign.center,
-                    textScaleFactor: 1.4,
+                    textScaleFactor: 1.3,
                   ),
                 ),
                 Flexible(
